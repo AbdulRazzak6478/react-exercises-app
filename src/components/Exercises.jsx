@@ -38,7 +38,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
       setExercises(exercisesData);
     };
     fetchExercisesData1();
-  }, [bodyPart]);
+  },[bodyPart]);
   return (
     <Box id="exercises" sx={{ mt: { lg: "110px" } }} mt="50px" p="20px">
       <Typography variant="h4">Showing Results</Typography>
