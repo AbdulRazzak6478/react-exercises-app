@@ -14,9 +14,13 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
     indexOfLastExercise
   );
   console.log("bodypart check", bodyPart);
+  const paginate = (e, value) => {
+    setCurrentPage(value);
+    window.scrollTo({ top: 1600, behavior: "smooth" });
+  };
   useEffect(() => {
     const fetchExercisesData1 = async () => {
-      console.log("fucntion called")
+      console.log("fucntion called");
       let exercisesData = [];
       if (bodyPart === "all") {
         exercisesData = await fetchData(
@@ -48,9 +52,21 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
           <ExerciseCard key={index} exercise={exercise} />
         ))}
       </Stack>
+      <Stack mt="100px" alignItems={"center"}>
+        {exercises.length > 9 && (
+          <Pagination
+            color="standard"
+            shape="rounded"
+            defaultPage={1}
+            count={Math.ceil(exercises.length / 9)}
+            page={currentPage}
+            onChange={paginate}
+            size={"large"}
+          />
+        )}
+      </Stack>
     </Box>
   );
 };
 
 export default Exercises;
-
