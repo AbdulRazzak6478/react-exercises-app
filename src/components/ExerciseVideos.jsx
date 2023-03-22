@@ -16,7 +16,7 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
         justifyContent={"flex-start"}
         flexWrap="wrap"
         alignItems={"center"}
-        sx={{ flexDirection: { lg: "row" }, gap: { lg: "110px", xs: "0" } }}
+        sx={{ flexDirection: { lg: "row",md:'row' }, gap: { lg: "110px", xs: "0" } }}
       >
         {exerciseVideos?.slice(0, 6).map((item, index) => (
           <a
@@ -26,9 +26,9 @@ const ExerciseVideos = ({ exerciseVideos, name }) => {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={item.video.thumbnails[0].url} alt={item.video.title} />
+            <img src={item.video.thumbnails[0].url} alt={item.video.title} style={{borderRadius:'10px'}} />
             <Box>
-                <Typography>
+                <Typography sx={{color:'black'}}>
                     {item.video.title}
                 </Typography>
                 <Typography>

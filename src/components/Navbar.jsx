@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Stack } from "@mui/material";
+import { duration, Stack } from "@mui/material";
 import Logo from "../assets/logo.svg";
 const Navbar = () => {
   return (
@@ -44,7 +44,7 @@ const Navbar = () => {
         </Link>
         <a
           href="#exercises"
-          style={{ textDecoration: "none", color: "#3A1212" }}
+          style={{ textDecoration: "none", color: "#3A1212",transition:"0.5s linear ease-in-out"  }}
         >
           Exercises
         </a>

@@ -88,7 +88,7 @@ body {
 }
 
 .exercise-card:hover,
-.bodyPart-card:hover {
+.bodyPart-card:hover,.exercise-video:hover {
   transform: scale(1.1, 1.1);
 }
 
@@ -102,8 +102,13 @@ body {
   flex-direction: column;
   gap: 24px;
   width: 387px;
-  height: 381px;
+  height: 350px;
   text-decoration: none;
+  color:black;
+  padding: 10px;
+  border:1px solid black;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 @media screen and (max-width:1200px) {
